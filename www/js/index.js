@@ -44,6 +44,7 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
+        document.location.href = "pathBuilderTester.html";
 
         console.log('Received Event: ' + id);
     }
