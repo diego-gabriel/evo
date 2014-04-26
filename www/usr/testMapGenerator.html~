@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+	#map{
+		height: 500px;
+		width: 500px;
+	}
+</style>
+</head>
+
+<body>
+	<svg id = "map" height="10" width="10">
+		<polygon points="0,0 0,10 10,0 " style="fill:green"></polygon>
+		<polygon style="fill:green" points="0,0 0,10 10,0 "/>
+	<polygon points="0,0 0,10 10,10 10,0 " style="fill:lime"></polygon><polygon points="0,10 0,20 10,20 10,10 " style="fill:lime"/><polygon points="0,20 0,30 10,30 10,20 " style="fill:lime"/><polygon points="10,0 10,10 20,10 20,0 " style="fill:lime"/><polygon points="10,10 10,20 20,20 20,10 " style="fill:lime"/><polygon points="10,20 10,30 20,30 20,20 " style="fill:lime"/><polygon points="20,0 20,10 30,10 30,0 " style="fill:lime"/><polygon points="20,10 20,20 30,20 30,10 " style="fill:lime"/><polygon points="20,20 20,30 30,30 30,20 " style="fill:lime"/>
+	</svg>
+    <script src="../js/jquery.js"></script>
+    <script src="../data/levels.js"></script>
+    <script src="scripts/init.js"></script>
+    <script src="scripts/mapGenerator.js"></script>
+</body>
+</html>

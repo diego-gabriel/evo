@@ -15,7 +15,7 @@ var drawpolygon = function (polygon) {
 			points += " ";
 		}
 		var polygonHtml =
-		jQuery("<polygon>", {
+		jQuery("<polygon/>", {
  		   "points": points,
  		   "style":"fill:lime"
 		}).appendTo('svg');
