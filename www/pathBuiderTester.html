@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>PathBuilderTester</title>
+	<script type="text/javascript" src = "js/jquery.js"></script>
+	<script type="text/javascript" src = "js/moveCore.js"></script>
+	<script type="text/javascript" src = "js/graphTest.js"></script>
+</head>
+<body> 
+	<p id = "police" style = "position: absolute;"> P </p>
+
+	<script type="text/javascript">
+		$(function(){
+			var origen = new point(0, 0);
+			var destino = new point(100, 100);
+			var path = buildPath(origen, destino, grafo);
+			moveBy($('#police'), path);
+		});
+
+	</script>
+
+</body>
+</html>
