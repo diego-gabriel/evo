@@ -1,12 +1,14 @@
-var levels = new Array();
-for (int i = 0; i < 100; i++) {
-	for (int j = 0; j < 100; j++) {
-		levels["puntos"][i][j] = new Point(i, j);	
-	}
-}
-function Point(var x, var y) {
+levels = new Array(); 
+levels["puntos"] = new Array();
+var Point = function (x, y) {
 	this.x = x;
 	this.y = y;	
+};
+for (var i = 0; i < 100; i++) {
+	levels["puntos"][i] = new Array();
+	for (var j = 0; j < 100; j++) {
+		levels["puntos"][i][j] = new Point(i, j);	
+	}
 }
 //[levelNumber][poligonNumber][pointNumber] = (x, y)
 levels[0]["poligonos"][0][0] = levels["puntos"][0][0];
