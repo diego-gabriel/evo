@@ -1,10 +1,20 @@
 var mapGenerator = {
-	generateMap : function (poligons) {
-		alert("hi");
-		poligons.forEach(drawPoligon);
+	generateMap : function (polygons) {
+		for (var polygon in polygons) {
+			alert("SALLL!!!");
+			drawpolygon(polygon);	
+		};
 	}
 }
-var drawPoligons = function () {
-	alert("hi");	
+var drawpolygon = function (polygon) {
+	var svg = $("#map");
+	var points = '"';
+	for (var row in polygon) {
+		points += " ";
+		for (var column in points[row]) {
+			points+=row + "," + column;	
+		}
+	}	
 }
-mapGenerator.generateMap(levels[0]["poligonos"]);
+alert(points);
+mapGenerator.generateMap(levels[0]["polygons"]);
