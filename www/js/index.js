@@ -17,6 +17,7 @@
  * under the License.
  */
 var app = {
+	alert("hi");
     // Application Constructor
     initialize: function() {
         this.bindEvents();
