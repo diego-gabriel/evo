@@ -8,21 +8,26 @@ function Riot(pos, rioterNum){
 	this.exists = true;
 }
 
-function selfDestruct(){
-	this.exists = false;
-}
-
-function liveController(){
-	this.riotersChecker();
-	if(this.rioters.length < 5){
-		this.selfDestruct();
+var riotProto = function(){
+	
+	selfDestruct : function(){
+		this.exists = false;
 	}
-}
 
-function riotersChecker(){
-	for(var i=0; i<this.rioters.length; i++){
-		if(this.rioters[i].moral === 0){
-			this.rioters.splice(i, 1);
+	liveController : function(){
+		this.riotersChecker();
+		if(this.rioters.length < 5){
+			this.selfDestruct();
 		}
 	}
+
+	riotersChecker : function(){
+		for(var i=0; i<this.rioters.length; i++){
+			if(this.rioters[i].moral === 0){
+				this.rioters.splice(i, 1);
+			}
+		}
+	}
+	
 }
+Riot.prototype = riotProto();
