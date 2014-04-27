@@ -7,7 +7,7 @@ var Point = function (x, y) {
 for (var i = 0; i < 100; i++) {
 	levels["puntos"][i] = new Array();
 	for (var j = 0; j < 100; j++) {
-		levels["puntos"][i][j] = new Point(i, j);	
+		levels["puntos"][i][j] = new Point(i*10, j*10);	
 	}
 }
 //[levelNumber][poligonNumber][pointNumber] = (x, y)
