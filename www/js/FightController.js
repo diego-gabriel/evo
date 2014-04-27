@@ -8,7 +8,7 @@ function fight(this.riot, police){
 		for(i=1; i<riot.rioters.length + 1; i++){
 			riot.liveController();
 			riot.rioters[Math.floor((Math.random()*i))].attack();
-			setTimeout(function(){police.attack()},1000);
+			setTimeout(function(){police.attack()},300);
 		}				
 	}
 }
