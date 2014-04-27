@@ -1,9 +1,9 @@
-//Solamente contiene a los bloqueadores o rioters
-function Riot(pos){
+function Riot(pos, rioterNum){
 	this.pos = pos;
 	this.rioters = new Array();
-	for(var i=0; i<rioters.length; i++){
-		rioters[i] = new Rioter();
+	var rioterFact = new RioterFactory;
+	for(var i=0; i<rioterNum; i++){
+		rioters[i] = rioterFact.makeRioter("Civil");
 	}
 	this.exists = true;
 }
