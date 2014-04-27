@@ -1,7 +1,7 @@
 function FightController(riot){
 	this.riot = riot;
 }
-
+//Aqui solo se recibe por el momento a un policia (ustedes dijeron por el momento) 
 function fight(police){
 	while(riot.exists){
 		var i;
