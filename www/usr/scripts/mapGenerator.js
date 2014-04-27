@@ -20,7 +20,8 @@ var drawpolygon = function (polygon) {
 		g+=10;
 		b-=10;		
 		myPoints = '';
-	}
+	}	
+	$("<circle cx=\"50\" cy=\"50\" r=\"40\" stroke=\"black\" stroke-width=\"3\" fill=\"red\" />").appendTo("svg");
 	$("#cont").html($("#cont").html());
 	console.log(svg);
 	console.log(myPoints);	

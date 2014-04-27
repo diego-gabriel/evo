@@ -1,12 +1,28 @@
 // JavaScript Document
+function policeFactory(){      
+    this.makePolice = function(type){
+        if (type === "Alumno") {
+            return Alumno();
+        };
+    }
+ 
+    function Alumno(){
+        var armaFact = new ArmaFactory();
+		var garrote = armaFact.makeArma("Garrote");
+		
+		
+		return new Police(alumno,0.2, 0.5, 0.2, 0.5, 80, 120, 10, 0, 0, 1200, 1500, 50);
+    }
+ 
+}
 
-function Police(grado, minAtaque, maxAtaque, minRecarga,maxRecarga,velocidad, nivelArma,experiencia, precioMin,precioMax ) {
+function Police(grado, minAtaque, maxAtaque, minRecarga,maxRecarga, minVida, maxVida, velocidad, nivelArma,experiencia, precioMin,precioMax ) {
 	 
 	 this.grado = grado;
 	 
-	 this.minVida = 0;
+	 this.minVida = minVida;
 	 
-	 this.maxVida = 100;
+	 this.maxVida = maxVida;
 	
 	 this.minAtaque =  minAtaque;
 	
@@ -30,17 +46,16 @@ function Police(grado, minAtaque, maxAtaque, minRecarga,maxRecarga,velocidad, ni
 	 
 	 this.precio = floor((Math.random()*precioMax)+ precioMin);
 	 
-	 this.recarga = floor((Math.random()*maxRecarga)+ minRecarga);
+	 this.recarga = Math.random()*maxRecarga + minRecarga;
 	 
-	 this.ataque = floor((Math.random()*maxAtaque)+ minAtaque);
-	 
-	 
+	 this.ataque = Math.random()*maxAtaque + minAtaque;
 	
 }
-
-function attack(rioter){
-	var damage = (this.recarga)*(this.nivelArma)*(this.ataque);
-	rioter.decency-= damage;
-	experiencia += damage;
-	
+var policeProto = function(){
+	attack : function(rioter){
+		var damage = (this.recarga)*(this.nivelArma + 1)*(this.ataque);
+	  	rioter.decency-= damage;
+	  	experiencia += damage;
+	}
 }
+Police.prototype = policeProto();
