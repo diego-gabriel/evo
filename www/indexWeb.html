@@ -2,12 +2,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Helping Evo</title>
+    <link rel="stylesheet" type="text/css" href="styles/layers.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/svg.css"/>
 </head>
 <body>
-    <button onclick="startGame" class ="game">
-        Empezar Juego
-    </button>
-    <script src="js/jquery.js"></script>
-    <script src="js/init.js"></script>
+    <div class ="gameLayer startLayer" >
+        <button id="startGame">
+            Empezar Juego
+        </button>
+    </div>
+    <div class="gameLayer levelsLayer" id ="cont">
+	    <svg id = "map" height="700" width="700" xmlns="http://www.w3.org/2000/svg">
+		</svg>
+	</div>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/init.js" type="text/javascript"></script>
+    <script src="js/game.js" type="text/javascript"></script>
+    <script src="js/mapGenerator.js" type="text/javascript"></script>
+    <script src="data/levels.js" type="text/javascript"></script>
+    <script src="js/conversor.js" type="text/javascript"></script>
+    <script src="js/moveCore.js" type="text/javascript"></script>
 </body>
 </html>

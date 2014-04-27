@@ -25,5 +25,3 @@ var drawpolygon = function (polygon) {
 	console.log(svg);
 	console.log(myPoints);	
 }
-
-mapGenerator.generateMap(levels[1]["polygons"]);

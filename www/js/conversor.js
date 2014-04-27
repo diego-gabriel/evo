@@ -6,7 +6,6 @@ var conversor = {
             var pointsInPolygon = points.length;
             for (var pointKey in points) {
                 var u = points[pointKey];
-                console.log((+pointKey + 1));
                 var v = points[(+pointKey + 1) % pointsInPolygon];
                 conversor.insertGraphEdge(graph, u, v);
             }
@@ -24,12 +23,10 @@ var conversor = {
             for (neighboardKey in neighboards) {
                 var neighboard = neighboards[neighboardKey];
                 if (neighboard == target) {
-                    //console.log(neighboard + " es igual a " + target);
                     existsTarget = true;
                 }
             }
             if (!existsTarget) {
-                console.log(existsTarget, ". Pushing to " + source + ".");
                 graph[source].push(target);
             }
         } else {
