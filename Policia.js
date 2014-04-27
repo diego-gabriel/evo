@@ -25,13 +25,22 @@ function Police(grado, minAtaque, maxAtaque, minRecarga,maxRecarga,velocidad, ni
 	 this.precioMin = precioMin;
 	 
 	 this.precioMax = precioMax;
+	 
+	 this.vida = floor((Math.random()*maxVida)+ minVida);
+	 
+	 this.precio = floor((Math.random()*precioMax)+ precioMin);
+	 
+	 this.recarga = floor((Math.random()*maxRecarga)+ minRecarga);
+	 
+	 this.ataque = floor((Math.random()*maxAtaque)+ minAtaque);
+	 
+	 
 	
 }
 
 function attack(rioter){
-	var damage = (floor((Math.random()*this.maxRecarga)+ this.minRecarga))*(this.nivelArma)*(floor((Math.random()*this.maxAtaque) + this.minAtaque));
+	var damage = (this.recarga)*(this.nivelArma)*(this.ataque);
 	rioter.decency-= damage;
 	experiencia += damage;
 	
 }
-
