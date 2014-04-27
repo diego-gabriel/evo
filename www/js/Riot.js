@@ -1,7 +1,7 @@
 function Riot(pos, rioterNum){
 	this.pos = pos;
 	this.rioters = new Array();
-	var rioterFact = new RioterFactory;
+	var rioterFact = new RioterFactory();
 	for(var i=0; i<rioterNum; i++){
 		rioters[i] = rioterFact.makeRioter("Civil");
 	}
