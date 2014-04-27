@@ -2,7 +2,7 @@ function FightController(riot){
 	this.riot = riot;
 }
 
-function fight(this.riot, police){
+function fight(police){
 	while(riot.exists){
 		var i;
 		for(i=1; i<riot.rioters.length + 1; i++){
