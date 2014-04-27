@@ -1,3 +1,4 @@
+//Solamente contiene a los bloqueadores o rioters
 function Riot(pos){
 	this.pos = pos;
 	this.rioters = new Array();
