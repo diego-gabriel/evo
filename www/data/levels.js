@@ -2,7 +2,9 @@ levels = new Array();
 levels["puntos"] = new Array();
 var Point = function (x, y) {
 	this.x = x;
-	this.y = y;	
+	this.y = y; this.toString = function () {
+	    return this.x + " - " + this.y;
+	}
 };
 for (var i = 0; i < 100; i++) {
 	levels["puntos"][i] = new Array();

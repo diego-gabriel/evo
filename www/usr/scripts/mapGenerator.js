@@ -1,8 +1,9 @@
 var mapGenerator = {
 	generateMap : function (polygons) {
+		console.log("POLYGONS: " + polygons);
 		for (var polygon in polygons) {
-			alert("SALLL!!!");
-			drawpolygon(polygon);	
+			console.log(polygon);
+			drawpolygon(polygons[polygon]);	
 		};
 	}
 }
@@ -12,9 +13,9 @@ var drawpolygon = function (polygon) {
 	for (var row in polygon) {
 		points += " ";
 		for (var column in points[row]) {
-			points+=row + "," + column;	
+			points += row + "," + column;	
 		}
-	}	
+	}
+	console.log(points);
 }
-alert(points);
 mapGenerator.generateMap(levels[0]["polygons"]);
