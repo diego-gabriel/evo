@@ -1,5 +1,5 @@
 // JavaScript Document
-function policeFactory(){      
+function PoliceFactory(){      
     this.makePolice = function(type){
         if (type === "Alumno") {
             return Alumno();
