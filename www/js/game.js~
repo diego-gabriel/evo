@@ -25,7 +25,6 @@ var game = {
 				var endPoint = SVGController.processClick(event, $(this));
         		endPoint = levels["puntos"][endPoint.x][endPoint.y];
 				var path = buildPath(startingPoint, endPoint, graph);
-				startingPoint = endPoint;
 				//moveBy($('#police'), path);
         		movingParamethers.currentNode = 0;
         		movingParamethers.path = path;

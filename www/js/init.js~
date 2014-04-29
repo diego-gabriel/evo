@@ -7,6 +7,6 @@ var init = function () {
     $(".gameLayer").hide();
     $(".startLayer").show();
     startButton.click(function () {
-        game.startLevel(1);
+        game.startLevel(0);
     });
 }
