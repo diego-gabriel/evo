@@ -44,7 +44,7 @@ function buildPath(origin, destino, grafo){
 		path.push(parent[destino])
 		destino = parent[destino];
 	}
-	path.pop();
+
 	return path.reverse();
 }
 

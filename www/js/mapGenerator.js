@@ -1,6 +1,10 @@
 var mapGenerator = {
 	generateMap : function (polygons) {
 	drawpolygon(polygons);	
+	},
+	generateDot : function (startPoint) {
+		$("<circle id=\"police\" cx=\""+startPoint.x+"\" cy=\""+startPoint.y+"\" r=\"15\" stroke=\"black\" stroke-width=\"3\" fill=\"green\" />").appendTo($("#map"));
+		$("#cont").html($("#cont").html());	
 	}
 }
 
@@ -20,9 +24,9 @@ var drawpolygon = function (polygon) {
 		g+=10;
 		b-=10;		
 		myPoints = '';
-	}
-	$("<circle cx=\"0\" cy=\"0\" r=\"15\" stroke=\"black\" stroke-width=\"3\" fill=\"red\" />").appendTo("svg");
+	}	
 	$("#cont").html($("#cont").html());	
 }
 
-mapGenerator.generateMap(levels[1]["polygons"]);
+//mapGenerator.generateMap(levels[1]["polygons"]);
+
